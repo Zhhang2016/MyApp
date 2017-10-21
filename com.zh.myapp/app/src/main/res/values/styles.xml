@@ -74,4 +74,12 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+<!--Dialog的弹窗样式-->
+
+    <style name="common_textDialogStyle">
+
+
+    </style>
+
+
 </resources>
