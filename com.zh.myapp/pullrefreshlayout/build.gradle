@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+//publish {
+//    userOrg = 'yan157'
+//    groupId = 'com.yan'
+//    artifactId = 'pullrefreshlayout'
+//    publishVersion = '1.8.5'
+//    website = 'https://github.com/genius158/RefreshLayout/'
+//}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 25
+        versionCode 10
+        versionName "1.8.5"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    provided rootProject.ext.dependencies["recyclerview-v7"]
+}
+
+uploadArchives{
+    repositories.mavenDeployer{
+        //这里的url可以换成自己的仓库地址
+        repository(url:"http://39.108.120.100:8090/repository/AndroidLib/"){
+            authentication(userName:"army", password:"111111")
+        }
+        //compile "com.juziwl.exue:pulltorefresh:0.0.1"
+        pom.version = "0.0.1"
+        pom.artifactId = "pullrefreshlayout"
+        pom.groupId = "com.juziwl.exue"
+    }
+}

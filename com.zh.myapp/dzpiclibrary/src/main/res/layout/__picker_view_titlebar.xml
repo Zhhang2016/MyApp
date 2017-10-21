@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="44dp"
+    android:background="@color/__picker_new_main_color"
+    tools:ignore="ResourceName">
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/main_nav_close" />
+
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="相机胶卷"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/title_right_pic"
+        android:layout_toRightOf="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:src="@drawable/main_xiala"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

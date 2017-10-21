@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yan.pullrefreshlayout.PullRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <jzwl.com.comzhmyapp.pullfresh.BaseWrapRecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </jzwl.com.comzhmyapp.pullfresh.BaseWrapRecyclerView>
+
+
+    </com.yan.pullrefreshlayout.PullRefreshLayout>
+
+
+</LinearLayout>

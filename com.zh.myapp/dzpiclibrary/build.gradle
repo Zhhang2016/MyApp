@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+//  resourcePrefix "__picker_"
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "0.8.5"
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile rootProject.ext.dependencies["recyclerview-v7"]
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["glide"]
+    compile rootProject.ext.dependencies["glide-okhttp3-integration"]
+    compile rootProject.ext.dependencies["nineoldandroids"]
+}
+
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories.mavenDeployer {
+        //这里的url可以换成自己的仓库地址
+        repository(url: "http://39.108.120.100:8090/repository/AndroidLib/") {
+            authentication(userName: "army", password: "111111")
+        }
+        //compile "com.juziwl.exue:image_select_library:0.0.1"
+        pom.version = "0.0.1"
+        pom.artifactId = "image_select_library"
+        pom.groupId = "com.juziwl.exue"
+    }
+}

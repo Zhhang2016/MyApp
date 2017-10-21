@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jzwl.com.comzhmyapp">
+
+    <!-- 摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS." />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".zxing.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorPortrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity android:name=".ui.activity.CircleImageViewActivity" />
+        <activity android:name=".ui.activity.TestCardViewActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".ui.activity.TestRecyclerViewPullRefreshActivity" />
+        <activity android:name=".ui.activity.TestViewPagerActivity"/>
+        <activity android:name=".ui.activity.TestViewGroupActivity"/>
+
+    </application>
+
+</manifest>

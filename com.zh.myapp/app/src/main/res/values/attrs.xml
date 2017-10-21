@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义ImageView的属性-->
+    <declare-styleable name="common_RoundImageView">
+        <attr name="common_borderRadius" />
+        <attr name="common_type" />
+        <!--下面是跟带边有关的属性-->
+        <attr name="neddBorder" format="boolean" />
+        <attr name="borderWith" format="dimension" />
+        <attr name="borderColor" format="color" />
+    </declare-styleable>
+    <attr name="common_borderRadius" format="dimension" />
+    <attr name="common_type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <!--   &lt;!&ndash;带Border的ImageView&ndash;&gt;
+       <declare-styleable name="CircleImageView">
+           <attr name="border_with" format="dimension"/>
+           <attr name="border_color_c" format="color"/>
+           <attr name="need_border" format="boolean"/>
+       </declare-styleable>-->
+
+    <declare-styleable name="MyCircleImageView">
+        <attr name="borderRadius" format="dimension" />
+        <attr name="type" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

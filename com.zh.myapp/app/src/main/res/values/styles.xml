@@ -1,0 +1,77 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="textDialogStyle" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 对话框是否有遮盖 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+<!--PulllRefrshLayout-->
+    <declare-styleable name="PullRefreshLayout">
+        <attr name="prl_refreshEnable" format="boolean" />
+        <attr name="prl_loadMoreEnable" format="boolean" />
+        <attr name="prl_twinkEnable" format="boolean" />
+        <attr name="prl_autoLoadingEnable" format="boolean" />
+
+        <attr name="prl_refreshTriggerDistance" format="dimension" />
+        <attr name="prl_loadTriggerDistance" format="dimension" />
+        <attr name="prl_pullLimitDistance" format="dimension" />
+        <attr name="prl_overScrollMaxTriggerOffset" format="dimension" />
+
+        <attr name="prl_dragDampingRatio" format="float" />
+        <attr name="prl_animationDuring" format="integer" />
+        <attr name="prl_overScrollDampingRatio" format="float" />
+        <attr name="prl_overScrollAdjustValue" format="float" />
+
+        <attr name="prl_targetId" format="reference" />
+
+        <attr name="prl_headerViewId" format="reference" />
+        <attr name="prl_footerViewId" format="reference" />
+
+        <attr name="prl_headerClass" format="string" />
+        <attr name="prl_footerClass" format="string" />
+
+        <attr name="prl_headerShowGravity" format="enum">
+            <enum name="follow" value="0" />
+            <enum name="placeholder_follow" value="1" />
+            <enum name="placeholder_center" value="2" />
+            <enum name="center_follow" value="3" />
+            <enum name="follow_center" value="4" />
+            <enum name="placeholder" value="5" />
+            <enum name="center" value="6" />
+        </attr>
+        <attr name="prl_footerShowGravity" format="enum">
+            <enum name="follow" value="0" />
+            <enum name="placeholder_follow" value="1" />
+            <enum name="placeholder_center" value="2" />
+            <enum name="center_follow" value="3" />
+            <enum name="follow_center" value="4" />
+            <enum name="placeholder" value="5" />
+            <enum name="center" value="6" />
+        </attr>
+    </declare-styleable>
+
+    <style name="MyTextViewSyle">
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

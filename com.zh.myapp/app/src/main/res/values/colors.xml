@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="color_border_white">#e5e5e5</color>
+
+    <!-- com.google.com.google.zxing -->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="result_points">#c099cc00</color>
+
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_color">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <color name="color_orange_lighted">#dc6744</color>
+
+
+</resources>
