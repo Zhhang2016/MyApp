@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000">
+    android:background="#fff">
 
 
     <jzwl.com.comzhmyapp.view.RectImageView
@@ -12,7 +12,7 @@
         android:layout_height="300dp"
         android:layout_centerInParent="true"
         android:src="@mipmap/hugh"
-        app:borderColor="#fff"
+        app:borderColor="#000"
         app:borderWith="3dp"
         app:neddBorder="true" />
 

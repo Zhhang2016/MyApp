@@ -44,8 +44,8 @@ public class CommonDialog {
      * @return
      */
     public Dialog createDiaog(Context context, String content, String message, int confirmRes, int canlelRes, CommonDialogClickListener listener) {
-//        dialog = new Dialog(context, R.style.common_textDialogStyle);
-        dialog = new Dialog(context);
+        dialog = new Dialog(context, R.style.common_textDialogStyle);
+//        dialog = new Dialog(context);
         LayoutInflater inflater = LayoutInflater.from(context);
         try {
             View view = inflater.inflate(R.layout.dialog_common, null);
