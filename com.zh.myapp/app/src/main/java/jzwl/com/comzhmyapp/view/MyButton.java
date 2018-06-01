@@ -13,7 +13,9 @@ import android.widget.Button;
  * @author: zhaoh
  */
 @SuppressLint("AppCompatCustomView")
+
 public class MyButton extends Button {
+
     public MyButton(Context context) {
         super(context);
     }
