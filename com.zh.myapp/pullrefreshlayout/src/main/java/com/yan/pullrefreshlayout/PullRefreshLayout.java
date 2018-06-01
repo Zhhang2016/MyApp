@@ -674,7 +674,7 @@ public class PullRefreshLayout extends ViewGroup implements NestedScrollingParen
 
             //结束回复之前干的活
 
-         resetHeaderView(moveDistance);
+            resetHeaderView(moveDistance);
 
         } else if ((refreshState == 0 && moveDistance < 0) || (refreshState == 2 && moveDistance > 0) || isResetTrigger) {
             resetFootView(moveDistance);
@@ -718,22 +718,15 @@ public class PullRefreshLayout extends ViewGroup implements NestedScrollingParen
             resetHeaderAnimator.setDuration(getAnimationTime(headerViewHeight));
             if (refreshState == 1) {
                 //下拉后缩回需要先执行完成动画
-                if (((OnPullListener) headerView)!=null) {
+                if (((OnPullListener) headerView) != null) {
                     ((OnPullListener) headerView).getRefrishState(resetHeaderAnimator);
                 }
 
-            }else{
-              //  普通状态缩回
+            } else {
+                //  普通状态缩回
 
                 resetHeaderAnimator.start();
             }
-
-
-
-
-
-
-
 
 
         }
@@ -1445,7 +1438,7 @@ public class PullRefreshLayout extends ViewGroup implements NestedScrollingParen
         void onPullReset();
 
 
-        void  getRefrishState(ValueAnimator resetHeaderAnimator);
+        void getRefrishState(ValueAnimator resetHeaderAnimator);
 
 
     }
@@ -1516,8 +1509,6 @@ public class PullRefreshLayout extends ViewGroup implements NestedScrollingParen
         protected void animationEnd() {
         }
     }
-
-
 
 
 }

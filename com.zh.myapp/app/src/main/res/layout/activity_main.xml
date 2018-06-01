@@ -17,25 +17,35 @@
 
     <TextView
         android:id="@+id/tv_open"
-        android:layout_centerInParent="true"
-        android:text="打开扫描二维码"
-        android:padding="15dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="15dp"
+        android:text="打开扫描二维码"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="15dp"
+        android:text="Test" />
 
     <Button
-        android:onClick="two"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:text="进入下个页面"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="two"
+        android:text="进入下个页面"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/bt_test"
-        android:layout_alignParentBottom="true"
-        android:textAllCaps="false"
-        android:text="Test"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Test"
+        android:textAllCaps="false" />
 </RelativeLayout>

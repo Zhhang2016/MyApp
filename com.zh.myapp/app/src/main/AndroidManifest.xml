@@ -18,7 +18,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/myAppTheme">
         <activity
             android:name=".MainActivity"
             android:stateNotNeeded="true">
@@ -40,8 +40,8 @@
         <activity android:name=".ui.activity.TestCardViewActivity" />
         <activity android:name=".TestActivity" />
         <activity android:name=".ui.activity.TestRecyclerViewPullRefreshActivity" />
-        <activity android:name=".ui.activity.TestViewPagerActivity"/>
-        <activity android:name=".ui.activity.TestViewGroupActivity"/>
+        <activity android:name=".ui.activity.TestViewPagerActivity" />
+        <activity android:name=".ui.activity.TestViewGroupActivity" />
 
     </application>
 

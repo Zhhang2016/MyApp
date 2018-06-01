@@ -8,6 +8,55 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--主题设置的开始-->
+
+    <style name="myAppTheme" parent="Theme.AppCompat.Light">
+        <!--隐藏原来的ActionBar，为了在本project中使用ToolBar-->
+        <item name="windowActionBar">false</item>
+        <!--隐藏ActionBar的标题-->
+        <item name="windowNoTitle">true</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/common_activityAnimation</item>
+        <item name="android:buttonStyle">@style/common_buttonStyle</item>
+        <item name="android:buttonStyleSmall">@style/common_buttonStyle</item>
+        <item name="dividerVertical">@android:color/transparent</item>
+        <item name="dividerHorizontal">@android:color/transparent</item>
+        <item name="actionBarDivider">@android:color/transparent</item>
+        <item name="editTextStyle">@android:style/Widget.EditText</item>
+        <item name="android:textCursorDrawable">@drawable/common_text_cursor</item>
+        <item name="android:textColor">@color/color_323232</item>
+        <item name="android:textColorHint">@color/color_828282</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:actionModeBackground">@color/color_323232</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="actionBarSize">@dimen/common_actionbar_size</item>
+    </style>
+
+    <!--主题的风格End-->
+
+    <style name="common_activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/common_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/common_slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/common_slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/common_slide_right_out</item>
+    </style>
+
+    -------------------------------------------------------------------------------------------------------->
+
+
+    <style name="common_buttonStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:minHeight">0dip</item>
+        <item name="android:minWidth">0dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+
+
     <style name="textDialogStyle" parent="android:Theme.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowFrame">@null</item>
@@ -20,7 +69,7 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
 
-<!--PulllRefrshLayout-->
+    <!--PulllRefrshLayout-->
     <declare-styleable name="PullRefreshLayout">
         <attr name="prl_refreshEnable" format="boolean" />
         <attr name="prl_loadMoreEnable" format="boolean" />
@@ -74,7 +123,7 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-<!--Dialog的弹窗样式-->
+    <!--Dialog的弹窗样式-->
 
     <style name="common_textDialogStyle1" parent="@android:style/Theme.Dialog">
 

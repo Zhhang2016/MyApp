@@ -17,7 +17,7 @@ import jzwl.com.comzhmyapp.ui.activity.TestViewGroupActivity;
  * @author: zhaoh
  */
 public class TestActivity extends Activity implements View.OnClickListener {
-    private TextView tvCardView,tvRefresh,tvViewPager;
+    private TextView tvCardView, tvRefresh, tvViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

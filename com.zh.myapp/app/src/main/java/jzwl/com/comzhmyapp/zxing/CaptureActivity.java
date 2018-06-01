@@ -75,11 +75,7 @@ import com.google.zxing.client.android.result.ResultHandlerFactory;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.EnumSet;
 import java.util.Hashtable;
@@ -98,7 +94,6 @@ import jzwl.com.comzhmyapp.util.CustomSureDialog;
  * @author Sean Owen
  */
 public final class CaptureActivity extends Activity implements SurfaceHolder.Callback {
-
 
     protected void findViewById() {
         viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
@@ -148,6 +143,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     //private TextView statusView;
     // private View resultView;
     private Result lastResult;
+    private Result enCodeResult;
+
     private boolean hasSurface;
     private boolean copyToClipboard;
     public IntentSource source;
@@ -210,6 +207,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         viewfinderView.setCameraManager(cameraManager);
         handler = null;
         lastResult = null;
+        enCodeResult = null;
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -392,7 +390,11 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
                     finish();
                     return true;
                 }
-                if ((source == IntentSource.NONE || source == IntentSource.ZXING_LINK) && lastResult != null) {
+             /*   if ((source == IntentSource.NONE || source == IntentSource.ZXING_LINK) && lastResult != null) {
+                    restartPreviewAfterDelay(0L);
+                    return true;
+                }*/
+                if ((source == IntentSource.NONE || source == IntentSource.ZXING_LINK) && enCodeResult != null) {
                     restartPreviewAfterDelay(0L);
                     return true;
                 }
@@ -408,6 +410,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
             case KeyEvent.KEYCODE_VOLUME_UP:
                 cameraManager.setTorch(true);
                 return true;
+            default:
         }
         return super.onKeyDown(keyCode, event);
     }
@@ -471,6 +474,9 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     public void handleDecode(Result rawResult, Bitmap barcode, float scaleFactor) {
         inactivityTimer.onActivity();
         lastResult = rawResult;
+        enCodeResult = rawResult;
+
+        Log.e("eCodeResult", "eCodeResult==" + enCodeResult.toString());
         ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, rawResult);
 
         boolean fromLiveScan = barcode != null;
@@ -505,6 +511,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
                     handleDecodeInternally(rawResult, resultHandler, barcode);
                 }
                 break;
+            default:
         }
     }
 
@@ -711,6 +718,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 //    statusView.setVisibility(View.VISIBLE);
         viewfinderView.setVisibility(View.VISIBLE);
         lastResult = null;
+        enCodeResult = null;
     }
 
     public void drawViewfinder() {
@@ -935,7 +943,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         inactivityTimer.onActivity();
         // playBeepSoundAndVibrate();
 //        扫描开始：
-        Log.e("扫描开始：","扫描的信息是：" + result);
+        Log.e("扫描开始：", "扫描的信息是：" + result);
 //        valueDispose(result);
 
 
