@@ -17,6 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import jzwl.com.comzhmyapp.ui.activity.CircleImageViewActivity;
+import jzwl.com.comzhmyapp.ui.activity.TestHandOutEventMechanismActivity;
 import jzwl.com.comzhmyapp.util.CommonTools;
 import jzwl.com.comzhmyapp.util.CustomSureDialog;
 import jzwl.com.comzhmyapp.zxing.CaptureActivity;
@@ -123,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tv_open:
                 break;
             case R.id.tv_test:
+                startActivity(new Intent(MainActivity.this,TestHandOutEventMechanismActivity.class));
                 break;
             case R.id.bt_test:
                 break;

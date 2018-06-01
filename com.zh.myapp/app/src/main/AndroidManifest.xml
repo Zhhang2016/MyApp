@@ -42,6 +42,7 @@
         <activity android:name=".ui.activity.TestRecyclerViewPullRefreshActivity" />
         <activity android:name=".ui.activity.TestViewPagerActivity" />
         <activity android:name=".ui.activity.TestViewGroupActivity" />
+        <activity android:name=".ui.activity.TestHandOutEventMechanismActivity"/>
 
     </application>
 
